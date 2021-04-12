@@ -5,6 +5,10 @@ if ( ! function_exists( 'ppm_quickstart_theme_supports' ) ) :
 function ppm_quickstart_theme_supports(){
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'title-tag' );
+
+    register_nav_menus( array(
+        'main-menu'   => __( 'Primary menu', 'ppm-quickstart' ),
+    ) );
 }
 endif;
 add_action('after_setup_theme', 'ppm_quickstart_theme_supports');
