@@ -20,7 +20,7 @@
 
 
 
-    <section style="overflow:hidden;" class="<?php if($default_padding == true) : ?>enable-default-padding elementor-section elementor-section-boxed<?php endif; ?>">
+    <section style="overflow:hidden;" class="<?php if($default_padding == true) : ?>content-block elementor-section elementor-section-boxed<?php endif; ?>">
         <div class="elementor-container">
             <div class="internal-content-wrap">
                 <?php if($enable_page_title == true) : ?>

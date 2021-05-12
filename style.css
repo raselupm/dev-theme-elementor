@@ -111,15 +111,8 @@ h6 {
 }
 p {margin-bottom: 15px}
 p:last-child {margin-bottom: 0}
-body {
 
-}
-
-.content-block, .enable-default-padding {padding: 60px 0}
-
-div.elementor-widget-heading .elementor-heading-title, div.elementor-widget-text-editor {
-    color: inherit;
-}
+.content-block {padding: 60px 0}
 
 
 /* Medium Layout: 1280px. */
