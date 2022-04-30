@@ -25,11 +25,11 @@ if( class_exists( 'CSF' ) ) {
     // Metaboxes
 
     // Page metabox
-    $page_metabox_prefix = 'ppm_meta';
+    $page_metabox_prefix = 'ppm_page_meta';
     CSF::createMetabox( $page_metabox_prefix, array(
         'title'     => 'Options',
         'post_type' => 'page',
-        'data_type' => 'serialize', 
+        'data_type' => 'unserialize',
     ) );
 
     CSF::createSection( $page_metabox_prefix, array(

@@ -15,8 +15,8 @@ function ppm_quickstart_woocommerce_setup() {
             ),
         )
     );
-    add_theme_support( 'wc-product-gallery-zoom' );
-    add_theme_support( 'wc-product-gallery-lightbox' );
+    //add_theme_support( 'wc-product-gallery-zoom' );
+    //add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
 }
 add_action( 'after_setup_theme', 'ppm_quickstart_woocommerce_setup' );
@@ -40,7 +40,7 @@ if ( ! function_exists( 'ppm_quickstart_woocommerce_wrapper_before' ) ) {
         <div class="content-block">
             <div class="elementor-section elementor-section-boxed">
                 <div class="elementor-container">
-                    <div class="ppm-woocommerce-wrap">
+                    <div class="internal-content-wrap ppm-woocommerce-wrap">
                         <main id="primary" class="site-main">
         <?php
     }
@@ -68,4 +68,8 @@ if ( ! function_exists( 'ppm_quickstart_woocommerce_wrapper_after' ) ) {
 add_action( 'woocommerce_after_main_content', 'ppm_quickstart_woocommerce_wrapper_after' );
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 20);
+
+function ppm_disable_woo_commerce_sidebar() {
+    remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+}
+add_action('init', 'ppm_disable_woo_commerce_sidebar');
