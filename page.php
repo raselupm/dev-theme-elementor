@@ -1,21 +1,6 @@
-<?php get_header(); if(have_posts()) : while(have_posts())  : the_post(); 
-    if(get_post_meta(get_the_ID(), 'ppm_meta', true)) {
-        $page_meta = get_post_meta(get_the_ID(), 'ppm_meta', true);
-    } else {
-        $page_meta = array();
-    }
-
-    if(array_key_exists('enable_page_title', $page_meta)) {
-        $enable_page_title = $page_meta['enable_page_title'];
-    } else {
-        $enable_page_title = true;
-    }
-
-    if(array_key_exists('default_padding', $page_meta)) {
-        $default_padding = $page_meta['default_padding'];
-    } else {
-        $default_padding = true;
-    }
+<?php get_header(); if(have_posts()) : while(have_posts())  : the_post();
+    $enable_page_title = get_post_meta(get_the_ID(), 'enable_page_title', true);
+    $default_padding = get_post_meta(get_the_ID(), 'default_padding', true);
 ?> 
 
 
