@@ -5,7 +5,7 @@ function ppm_quickstart_woocommerce_setup() {
         'woocommerce',
         array(
             'thumbnail_image_width' => 150,
-            'single_image_width'    => 300,
+            'single_image_width'    => 800,
             'product_grid'          => array(
                 'default_rows'    => 3,
                 'min_rows'        => 1,
