@@ -1,20 +1,11 @@
 <?php
 
 function ppm_quickstart_woocommerce_setup() {
-    add_theme_support(
-        'woocommerce',
-        array(
-            'thumbnail_image_width' => 150,
-            'single_image_width'    => 800,
-            'product_grid'          => array(
-                'default_rows'    => 3,
-                'min_rows'        => 1,
-                'default_columns' => 4,
-                'min_columns'     => 1,
-                'max_columns'     => 6,
-            ),
-        )
-    );
+    add_theme_support('woocommerce', [
+        'thumbnail_image_width' => 800,
+        'single_image_width'    => 1200
+    ]);
+
     //add_theme_support( 'wc-product-gallery-zoom' );
     //add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
