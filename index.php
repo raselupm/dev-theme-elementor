@@ -1,14 +1,7 @@
 <?php get_header(); ?>
 
-<div class="content-block">
-    <div class="elementor-section elementor-section-boxed">
-        <div class="elementor-container">
-            <div class="internal-content-wrap">
-                <?php get_template_part('post-excerpt'); ?>
-            </div>
-        </div>
-    </div>
-</div>
-
+    <section class="page-wrapper">
+        <?php get_template_part('post-excerpt'); ?>
+    </section>
 
 <?php get_footer(); ?>
