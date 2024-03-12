@@ -8,10 +8,17 @@ function phone_btn_shortcode( $atts, $content = null  ) {
     $options = get_option('ppm_theme_options');
     $phone = $options['phone'];
 
+    $html = '';
     if(!empty($phone)) {
+        if($class == 'text-only') {
+            $phone = preg_replace('/[^0-9]/', '', $phone);
+            if (strlen($numbersOnly) == 10) {
+                $phone += 1;
+            }
+
+            return $phone;
+        }
         $html = '<a href="tel:'.$phone.'" class="'.$class.'">'.$phone.'</a>';
-    } else {
-        $html = '';
     }
  
     return $html;
