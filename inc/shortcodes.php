@@ -15,10 +15,9 @@ function phone_btn_shortcode( $atts, $content = null  ) {
             if (strlen($numbersOnly) == 10) {
                 $phone += 1;
             }
-
-            return $phone;
+        } else {
+            $html = '<a href="tel:'.$phone.'" class="'.$class.'">'.$phone.'</a>';
         }
-        $html = '<a href="tel:'.$phone.'" class="'.$class.'">'.$phone.'</a>';
     }
  
     return $html;
